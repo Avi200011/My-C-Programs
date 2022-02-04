@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manubar of website</title>
+    <style>
+    .navbar{
+        background-color:rgb(0, 0, 0);
+        border-radius: 15px;
+
+    }  
+    .navbar li{
+           float:left;
+           list-style: none;
+           margin: 14px 13px;  
+        } 
+       
+        .navbar a{
+            color:rgb(229, 255, 0);
+            
+            
+        }
+        .navbar ul{
+            overflow:auto;
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 8px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        .navbar li a:hover{
+           background-color: rgb(55, 0, 255)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PAGES</a></li>
+            <li><a href="https://facebook.com">FACEBOOK</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <div class="search">
+                <input type="text" class="search" id="search" placeholder="Search here">
+            </div>
+        </ul>
+    </nav>
+    </header>    
+</body>
+</html>

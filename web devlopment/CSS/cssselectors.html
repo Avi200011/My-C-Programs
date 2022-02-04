@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>advance css selectors</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: rgb(234, 0, 255);
+        font-weight: bold;
+      }
+      /* if p is inside of li and all li inside in div 
+    
+      div li p {
+        color: gold;
+        background-color: silver;
+        font-size: 20px;
+      } 
+       if p is inside div so this is appilied 
+       div > p {
+        color: rgb(0, 255, 191);
+        background-color: black;
+        font-weight: bold;
+        font-size: 20px;
+      } 
+       if p is sublings of div i.e. p is next to the div
+      div + p{
+        color:white;
+        background-color:rgb(255, 0, 0);
+       }  */
+    </style>
+  </head>
+  <body>
+    <h1>this is more on selectors</h1>
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li class="item"><p>this is another paragraph inside li</p></li>
+          <li>this will not get affected</li>
+          <p>this is a para inside ul</p>
+        </ul>
+        <p>this is a selectors</p>
+      </div>
+      <p>this is second selectors</p>
+    </div>
+    <p>this is third selectors</p>
+  </body>
+</html>

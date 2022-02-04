@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>visiblity and Z-index</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 2px solid red;
+      }
+      #box1 {
+        position: relative;
+        top: 40px;
+        z-index: 2;
+        background-color: red;
+      }
+      #box2 {
+        position: relative; /* z-index work only when use position value */
+        z-index: 3; /* which z index is better its position is upper */
+        background-color: black;
+      }
+      #box3 {
+        /* visibility:hidden; disappear the element but not the space
+          display:none;  disappear the element and sapce*/
+        background-color: yellow;
+      }
+      #box4 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+  </body>
+</html>
+<!-- z index is used in many different type of blog and floating massages form and submit text -->

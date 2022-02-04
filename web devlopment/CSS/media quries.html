@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css media quries</title>
+    <style>
+      .box {
+        background-color: red;
+        text-align: center;
+        font-size: 60px;
+        color: white;
+        display: none;
+      }
+      @media (max-width: 300px) {
+        #box1 {
+          display: block;
+          background-color: gold;
+        }
+      }
+      @media only screen and (min-width: 310px) and (max-width: 600px) {
+        #box2 {
+          display: block;
+          background-color: rgb(0, 255, 255);
+        }
+      }
+      @media (min-width: 601px) and (max-width: 800px) {
+        #box3 {
+          display: block;
+          background-color: rgb(38, 0, 255);
+        }
+      }
+
+      @media (min-width: 801px) {
+        #box4 {
+          display: block;
+          background-color: rgb(51, 255, 0);
+        }
+      } 
+      /* meaning of the not, only and and keywords:
+ 
+not: The not keyword reverts the meaning of an entire media query.
+
+only: The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. It has no effect on modern browsers.
+
+and: The and keyword combines a media feature with a media type or other media features.
+
+They are all optional. However, if you use not or only, you must also specify a media type. */
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">Mai ek iPhone hoon</div>
+    <div class="box" id="box2">Mai ek Tablet hoon</div>
+    <div class="box" id="box3">Mai ek desktop computer hoon</div>
+    <div class="box" id="box4">Mai ek widescreen computer hoon</div>
+  </body>
+</html>

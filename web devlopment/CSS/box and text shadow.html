@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box and text shadow</title>
+    <style>
+      .card {
+        margin: 20px 23px;
+        padding: 20px 23px;
+        background-color: rgb(174, 194, 103);
+        border: 2px solid red;
+        /* box-shadow: offset-x offset-y color; */
+        /* box-shadow: offset-x offset-y blur-radius color; */
+        /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+        /* box-shadow: 10px 13px 10px 2px rgb(204, 0, 0); */
+        /* inset:it means shadow inside */
+        /* box-shadow: inset 3px 5px red; */
+        /* FOR DUEL COLOR SHADOW */
+        /* box-shadow: 3px 5px green, 4px 6px red; */
+        /* box-shadow: -7px -5px 10px 34px rgba(71, 172, 172, 0.5);
+      */
+      }
+      .container {
+        display: flex;
+      }
+      div::beford{
+        background: url("https://source.unsplash.com/user/erondu/1600x900")
+          no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.4;
+      }
+
+      .card h2 {
+        /* text-shadow: 3px 4px 2px red; */
+        /* text-shadow: -3px -4px 2px red; */
+        text-shadow: 3px 4px 0.5px red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="card1">
+        <h2>this is first</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatibus odio assumenda qui repudiandae veniam amet libero quis
+          asperiores! Repellat, voluptatum cumque? Maiores, suscipit quasi nobis
+          architecto inventore dolores facilis nam nisi esse perferendis
+          quaerat! Rem reprehenderit expedita dignissimos qui.
+        </p>
+      </div>
+      <div class="card" id="card2">
+        <h2>this is second</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          aliquid architecto eius voluptatem molestias voluptas vel praesentium
+          explicabo perferendis modi reprehenderit natus voluptates similique
+          officia pariatur nemo, sed est ullam. Recusandae deserunt sapiente
+          alias inventore laudantium rerum dolores maxime dolorum.
+        </p>
+      </div>
+      <div class="card" id="card3">
+        <h2>this is third</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque
+          iusto eos inventore molestias laborum officia vitae est nobis quaerat
+          laudantium, suscipit ducimus dolores temporibus, debitis reiciendis
+          voluptates pariatur consequatur distinctio quibusdam magnam modi autem
+          quod. Perspiciatis praesentium in inventore!
+        </p>
+      </div>
+      <div class="card" id="card4">
+        <h2>this is fourth</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, natus
+          minima, consequuntur dignissimos quam repellat nesciunt tenetur
+          repellendus dolores iste nostrum in ipsam, nobis dolorem. Quibusdam
+          labore inventore odit quam, ea atque molestias maiores aut sunt
+          eligendi obcaecati perferendis corporis.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
