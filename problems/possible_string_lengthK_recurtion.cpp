@@ -23,7 +23,7 @@ void printall(char set[], int k,int n)
 }
 int main()
 {
-    char set1[]={'a','b'};
+    char set1[]={'o','k'};
     int k=3; //num of length 
     printall(set1,k,2);
 }
