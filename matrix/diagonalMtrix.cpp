@@ -42,7 +42,8 @@ void display(struct matrix m)
 int main()
 {
     struct matrix m;
-    m.n = 4;
+    m.n ;
+    cin>>m>>n;
     Set(&m, 1, 1, 5);
     Set(&m, 2, 2, 8);
     Set(&m, 3, 3, 9);
