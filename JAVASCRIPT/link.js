@@ -46,5 +46,7 @@ console.log(happy*2,sara-2,sara**2,3**2);
 const first='java ';
 const sccond='script';
 console.log(first+sccond);
+let x;
+
 
 
