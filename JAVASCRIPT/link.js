@@ -67,9 +67,24 @@ console.log(bmijones,bmimark);
 console.log(bmijones<bmimark);
 
 console.log(" ADD MULTIPLE STRING ");
-const name='kavin';
+const name='kavin'
 const job='programmer';
 const Byear='2000';
 const Cyear='2020';
 const kavin=  "I'm " + firstname + ',my age '+(Cyear-Byear)+' and i am a '+ job ;
 console.log(kavin);
+console.log(`have
+a
+great journey`);
+const age=14;
+if (age >=18) {
+    console.log("Dost you can enjoy ");
+
+}else{[
+    console.log("sorry bro")
+]}
+const testyear = '2000';
+console.log(Number(testyear));
+console.log(Number(testyear)+18);
+console.log(Number('ballu'));
+console.log(typeof(NaN));
