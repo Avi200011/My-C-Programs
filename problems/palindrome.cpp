@@ -1,9 +1,9 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void paline(int n)
+string paline(string n)
 {
-    int a = n;
-    reverse(a.being(), a.end());
+    string a = n;
+    reverse(a.begin(), a.end());
     if (n == a)
     {
         return "yes";
@@ -13,7 +13,7 @@ void paline(int n)
 }
 int main()
 {
-    int n = 10001;
+    string n = "assa";
     cout << paline(n);
     return 0;
 }

@@ -156,3 +156,31 @@ switch (day) {
         console.log('not a valid day');
         break;
 }
+// TERNARY OPERATOR
+
+const boyas= 16;
+boyas>=18 ? console.log("you are a not an adult ") : console.log("make your life better 🔥");
+
+const time=boyas>=18 ? 'adult' : 'bachha';
+console.log(time);
+
+console.log(`i am a ${boyas>=18 ? 'adult' : 'bachha'}`);
+
+//CODING CHALLENGE 4
+
+const bill=275;
+let tipx,tipy;
+tipx=(bill/100)*15;
+tipy=(bill/100)*20;
+//USE TARNARY OPERATOR
+const chall4=bill>=50&&bill<=300?(bill+tipx):(bill+tipy);
+console.log(chall4);
+//USE IF-ELSE
+// if(bill>=50 && bill<=300)
+// {
+//     console.log(bill+tipx);
+// }
+// else
+//     console.log(bill+tipy)
+
+//USE TARNARY OPERATOR
