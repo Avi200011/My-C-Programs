@@ -1,4 +1,5 @@
-#include <iostream>
+//best case of recuction
+#include<bits/stdc++.h>
 using namespace std;
 int factorial(int n)
 {
@@ -11,8 +12,13 @@ int factorial(int n)
 int main()
 {
 
-    int n = 9;
+    int n = 5; 
     cout << "Factorial of " << n << " = " << factorial(n);
 
     return 0;
 }
+
+// 5*4!  n*face(n-1)
+// =5*4*3!
+// =5*4*6
+// =120
