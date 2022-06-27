@@ -1,22 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-void replacepi(string s)
+string replacepi(string s)
 {
-    if (s.length() == 0) // base case
-    {
-        return;
-    }
+    if (s.length() == 0 || s.length() == 1)
+
+        return s;
+
     if (s[0] == 'p' && s[1] == 'i')
     {
-        cout << "3.14";
-        replacepi(s.substr(2));
+        string output = replacepi(s.substr(2));
+        return "3.14" + output;
     }
     else
-        cout << s[0];
-    replacepi(s.substr(1));
+    {
+       return s[0] + replacepi(s.substr(1));
+    }
 }
 int main()
 {
-    replacepi("pipi");
+    cout<<replacepi("piavipi");
     return 0;
 }
