@@ -27,6 +27,12 @@ int add(struct Node*p)
     return sum;
     
 }
+// int addmore(Node*temp)
+// {
+//     if(temp==NULL)
+//     return 0;
+//     return(temp->data+addmore(temp->left)+addmore(temp->right));
+// }
 int Radd(struct Node*p)
 {
     int sum=0;
@@ -40,10 +46,10 @@ int main()
 {
     int A[] = {1, 8, 2, 1, 9,7,2};
     Node *head = new Node; // make the intial node
-    Node *temp;
-    Node *last;
-    head->data = A[0];
-    head->next = NULL;
+    Node *temp; //make a tempotary varivable
+    Node *last; //store the last at the node
+    head->data = A[0]; //1st data
+    head->next = NULL; //1st empty node
     last = head;
     // creat linkedlist
     for (int i = 1; i < sizeof(A) / sizeof(A[0]); i++)
@@ -68,5 +74,7 @@ int main()
     cout<<add(head);
     cout<<endl<<"recursion add = ";
     cout<<Radd(head);
+    // cout<<endl;
+    // cout<addmore(head);
     return 0;
 }
