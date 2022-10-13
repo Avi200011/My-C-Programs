@@ -24,6 +24,24 @@ void preorder(struct Node *root)
     preorder(root->left);
     preorder(root->right);
 }
+void preorder2(Node *root)
+{
+    stack st;
+    while(root!=NULL || is_empty(st))
+    {
+        if(root!=NULL)
+        {
+            cout<<root->data;
+            push(&st,root);
+            root=root->left; 
+        }
+        else 
+        {
+            root=pop(&st);
+            root=root->right;
+        }
+    }
+}
 void postorder(struct Node* root)
 {
     if (root==NULL)
@@ -91,6 +109,7 @@ int main()
     else{
         cout<<"key exist";
     }
+    preorder2(root);
     
     return 0;
 }

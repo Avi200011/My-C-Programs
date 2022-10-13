@@ -1,120 +1,84 @@
 #include <bits/stdc++.h>
+
 using namespace std;
-class Node
-{
+
+#define MAX 1000
+
+class Stack {
+	int top;
+
 public:
-    int data;
-    Node *next;
-    Node *last;
-} *head = NULL;
-int print(Node *head)
+	int a[MAX]; // Maximum size of Stack
+
+	Stack() { top = -1; }
+	bool push(int x);
+	int pop();
+	int peek();
+	bool isEmpty();
+};
+
+bool Stack::push(int x)
 {
-    Node *p = head;
-    while (p)
-    {
-        cout << p->data << "->" << flush;
-        p = p->next;
-    }
-    return 0;
+	if (top >= (MAX - 1)) {
+		cout << "Stack Overflow";
+		return false;
+	}
+	else {
+		a[++top] = x;  //stack[top] assign value
+		cout << x << " pushed into stack\n";
+		return true;
+	}
 }
-int count(Node *p)
+
+int Stack::pop()
 {
-    if (p == 0)
-        return 0;
-    else
-        return count(p->next) + 1;
+	if (top < 0) {
+		cout << "Stack Underflow";
+		return 0;
+	}
+	else {
+		int x = a[top--];
+		return x;
+	}
 }
-struct Node *search(Node *p, int key)
+int Stack::peek()
 {
-    if (p == NULL)
-        return NULL;
-    if (key == p->data)
-        return p;
-    return search(p->next, key); // Not found until the key reach
+	if (top < 0) {
+		cout << "Stack is Empty";
+		return 0;
+	}
+	else {
+		int x = a[top];
+		return x;
+	}
 }
-int add(Node *p)
+
+bool Stack::isEmpty()
 {
-    int sum = 0;
-    while (p)
-    {
-        sum = sum + p->data;
-        p = p->next;
-    }
-    return sum;
+	return (top < 0);
 }
-void insert(Node *p, int index, int x)
-{
-    Node *t;
-    int i;
-    if (index < 0 || index > count(p))
-        return;
-    t = new Node;
-    t->data = x;
-    if (index == 0)
-    {
-        t->next = head;
-        head = t;
-    }
-    else
-    {
-        for (i = 0; i <index-1; i++)
-        {
-            p=p->next;
-            t->next=p->next;
-            p->next=t;
-        }
-        
-    }
-}
-int readd(Node *p)
-{
-    int sum = 0;
-    if (p == 0)
-        return 0;
-    else
-        return readd(p->next) + p->data;
-}
-bool sortchack(Node *p)
-{
-    int x = INT16_MIN;
-    while (p != 0)
-    {
-        if (p->data < x)
-            return false;
-        x = p->data;
-        p = p->next;
-    }
-    return true;
-}
+
+// Driver program to test above functions
 int main()
 {
-    int A[] = {4, 5, 6, 17, 8, 9};
-    Node *head = new Node;
-    Node *temp;
-    Node *last;
+	class Stack s;
+	s.push(10);
+	s.push(20);
+	s.push(30);
+	cout << s.pop() << " Popped from stack\n";
+	
+	//print top element of stack after poping
+	cout << "Top element is : " << s.peek() << endl;
+	
+	//print all elements in stack :
+	cout <<"Elements present in stack : ";
+	while(!s.isEmpty())
+	{
+		// print top element in stack
+		cout << s.peek() <<" ";
+		// remove top element in stack
+		s.pop();
+	}
 
-    head->data = A[0];
-    head->last = NULL;
-    last = head;
-
-    for (int i = 1; i < sizeof(A) / sizeof(A[0]); i++)
-    {
-        temp = new Node;
-
-        temp->data = A[i];
-        temp->next = NULL;
-
-        last->next = temp;
-        last = temp;
-    }
-    print(head);
-    cout << endl;
-    cout << "Count = " << count(head) << endl;
-    temp = search(head, 6);
-    cout << "The found data is = " << temp->data << endl;
-    cout << "The sum of the num = " << add(head) << endl;
-    cout << "recursive sum = " << readd(head) << endl;
-    (sortchack(head)) ? cout << "sorted" : cout << "Not sorted";
-    void insertation=insert(head,0,7);
-    cout<<insertation;
+	return 0;
 }

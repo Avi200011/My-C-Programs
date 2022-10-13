@@ -43,7 +43,7 @@ int main()
 
     if(searchinBTS(root,key)==NULL){
         cout<<"key not exist";
- m    }
+    }
     else{
         cout<<"key exist";
     }
