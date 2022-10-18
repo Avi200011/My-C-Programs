@@ -1,0 +1,1 @@
+{"name":"Local: bubbleSort","url":"/Users/avijitsarkar/Documents/PROGRAMING/Searching&Sorting/bubbleSort.cpp","tests":[{"id":1666014877007,"input":"5\n66 77 1 5 99","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/avijitsarkar/Documents/PROGRAMING/Searching&Sorting/bubbleSort.cpp","group":"local","local":true}
