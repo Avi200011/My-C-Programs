@@ -1,9 +1,13 @@
-import turtle as tur 
+# name="tony stark"
+# age =51
+# is_genious=True
+# print(name)
+# print(age)
+# print(is_genious)
 
-def sample():
-    arr = [[line for line in data] for data in input().split()]
-    print(arr)
-    
-    
-if __name__ == '__main__': 
-    sample()
+# name=input(" ")
+# print("Hello "+ name) //taking input 
+
+age=input(" ")
+new_age=int(age)+2
+print(new_age)
